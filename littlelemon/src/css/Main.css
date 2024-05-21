@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Markazi Text", serif;
+}
+.logo{
+    height: 60px;
+}
+:root{
+    --mainColor1: #495e57;
+    --mainColor2: #f4ce14;
+    --secondaryColor1: #ee9972;
+    --secondaryColor2: #fbdabb;
+    --secondaryColor3: #edefee;
+    --secondaryColor4: #333333;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--secondaryColor3);
+    color: var(--mainColor1);
+}
+nav a{
+    margin: 0 2rem;
+}
+nav a:hover{
+    color: var(--mainColor2);
+    
+    
+}
+header .nav-btn{
+    padding: 5px;
+    display: none;
+    font-size: 1.8rem;
+}
+/* styling for when screen size is equal to or less than 1024px */
+@media only screen and (max-width: 1024px){
+   header .nav-btn{
+        display: block;
+    }
+    /* Making the nav dropdown go fullscreen */
+    header nav{
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor1);
+        color: #edefee;
+        transition: 1s;
+        
+    }
+    header .responsive-nav{
+        transform: translateY(100vh);
+    }
+    /* move button to top right */
+   nav .nav-close-btn{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+   }
+   nav a{
+    font-size: 1.5rem;
+   }
+}
