@@ -1,6 +1,7 @@
 import {FaBars, FaTimes} from "react-icons/fa"
 import logo from '../images/littlelemonlogo.jpg'
 import { useState,useRef } from "react";
+import{Link} from 'react-router-dom'
 import '../css/Main.css'
 
 
@@ -15,16 +16,19 @@ const Header = () =>{
     const showNavbar = () =>{
         navRef.current.classList.toggle("responsive-nav")
     }
+    const hideNavBar = () =>{
+        navRef.current.classList.remove("responsive-nav")
+    }
 return(
     <header>
         <img src={logo} alt='Little lemon logo' className="logo"/>
         <nav ref={navRef}>
-            <a href="/#" id="home">HOME</a>
-            <a href="/#" id="about">ABOUT</a>
-            <a href="/#" id="menu">MENU</a>
-            <a href="/#" id="reservations">RESERVATIONS</a>
-            <a href="/#" id="orderOnline">ORDER ONLINE</a>
-            <a href="/#" id="login">LOGIN</a>
+            <Link to="/" className="nav-item" onClick={hideNavBar}>HOME</Link>
+            <Link to="/about" className="nav-item"onClick={hideNavBar}>ABOUT</Link>
+            <Link to="/menu" className="nav-item"onClick={hideNavBar}>MENU</Link>
+            <Link to="/reservations" className="nav-item"onClick={hideNavBar}>RESERVATIONS</Link>
+            <Link to="/order-online" className="nav-item"onClick={hideNavBar}>ORDER ONLINE</Link>
+            <Link to="/login" className="nav-item"onClick={hideNavBar}>LOGIN</Link>
             {/* Clicking this button will remove the classname from the navtag */}
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                 <FaTimes/>

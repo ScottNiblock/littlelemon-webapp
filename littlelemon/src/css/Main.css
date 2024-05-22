@@ -18,6 +18,7 @@
     --secondaryColor4: #333333;
 }
 header{
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,19 +27,151 @@ header{
     background-color: var(--secondaryColor3);
     color: var(--mainColor1);
 }
-nav a{
+nav .nav-item{
     margin: 0 2rem;
+    text-decoration: none;
+    color: var(--mainColor1);
+    transition: color .3s ease-in-out, transform .3s ease-in-out;
+    
 }
-nav a:hover{
+nav .nav-item:hover{
     color: var(--mainColor2);
-    
-    
+    transform: scale(1.1);
 }
 header .nav-btn{
     padding: 5px;
     display: none;
     font-size: 1.8rem;
+    color: #495e57;
+    outline: none;
+    border: none;
+    background: none;
 }
+header .nav-btn:hover{
+    color: var(--mainColor2);
+    transition: color .3s ease-in-out;
+    
+}
+
+ .hero-section{
+    display: flex;
+    background-color: var(--mainColor1);
+    color: var(--secondaryColor3);
+    justify-content: space-between;
+}
+.hero-section-content{
+    margin: 2rem;
+    
+}
+.hero-section-content >h1{
+    color: var(--mainColor2);
+}
+h1{
+    font-size: 64px;
+}
+h3{
+    font-size: 54px;
+} 
+p{
+    font-size: 18px;
+}
+.table-img{
+    padding: .5rem;
+    border-radius: 15%;
+
+}
+.page-btn{
+background-color: var(--mainColor2);
+color: var(--secondaryColor4);
+font-weight: bold;
+padding: 8px;
+border-radius: 8px;
+margin-top: 1rem;
+transition: color .3s ease-in-out;
+border: none;
+}
+.page-btn:hover{
+    background-color: var(--secondaryColor3);
+    color: var(--mainColor1);
+}
+
+.specials{
+    background-color: var(--secondaryColor3);
+}
+.specials-top-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 2rem;
+}
+.special-card-layout{
+    display: flex;
+    justify-content: space-between;
+}
+.special-card{
+    width: 25%;
+    border: 1px solid var(--secondaryColor4);
+    border-radius: 8px;
+    margin: 0 2rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+
+
+}
+.special-card img{
+    width: 100%;
+    height: 40%;
+
+}
+.specials h1{
+    color: var(--secondaryColor4);
+}
+.dish-info{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.dish-price{
+    color: var(--secondaryColor1);
+}
+.dish-all{
+    margin: 0 .5rem;
+
+}
+.dish-desc{
+    margin-top: .5rem;
+    font-size: 14px;
+    color: gray;
+}
+.delivery-btn{
+    margin-bottom: .5rem;
+}
+.testimonials{
+    background-color: var(--secondaryColor4);
+    color:var(--secondaryColor3);
+    text-align: center;
+}
+.testimonial-layout{
+    display: flex;
+    justify-content: space-between;
+
+}
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--secondaryColor3);
+    border-radius: 8px;
+    margin: 1rem;
+    width: 25%;
+    
+}
+.user-img{
+    width: 80%;
+    margin: 0 10%;
+    border-radius: 50%;
+}
+
 /* styling for when screen size is equal to or less than 1024px */
 @media only screen and (max-width: 1024px){
    header .nav-btn{
@@ -47,7 +180,7 @@ header .nav-btn{
     /* Making the nav dropdown go fullscreen */
     header nav{
         position: fixed;
-        top: -100vh;
+        top: -100%;
         left: 0;
         height: 100%;
         width: 100%;
@@ -59,7 +192,7 @@ header .nav-btn{
         background-color: var(--mainColor1);
         color: #edefee;
         transition: 1s;
-        
+
     }
     header .responsive-nav{
         transform: translateY(100vh);
@@ -69,8 +202,37 @@ header .nav-btn{
     position: absolute;
     top: 2rem;
     right: 2rem;
+    color: var(--secondaryColor3);
    }
-   nav a{
+   nav .nav-item{
     font-size: 1.5rem;
+    color: var(--secondaryColor3);
    }
+}
+/* Adjusting for loss of image quality on screen shrink */
+@media (max-width: 716px){
+    .table-img{
+        display: none;
+    }
+
+}
+/* convert specials to column display on screen shrink */
+@media (max-width:762px){
+    .special-card-layout{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+    }
+    .special-card{
+        width: 75%;
+        height: 50%;
+    }
+
+}
+/*Change font size for larger screens*/
+@media (min-width:1000px){
+    .special-card p{
+        font-size: 2rem;
+    }
 }
