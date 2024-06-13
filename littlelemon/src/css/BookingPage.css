@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Markazi Text", serif;
+}
+#res-title{
+    text-align: center;
+}
+.res-page>h1{
+    text-align: center;
+}
+:root{
+    --mainColor1: #495e57;
+    --mainColor2: #f4ce14;
+    --secondaryColor1: #ee9972;
+    --secondaryColor2: #fbdabb;
+    --secondaryColor3: #edefee;
+    --secondaryColor4: #333333;
+}
+
+.res-page{
+background-color: var(--mainColor1);
+color: var(--mainColor2);
+padding-bottom: 1rem;
+}
+.res-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.page-btn{
+    background-color: var(--mainColor2);
+    color: var(--secondaryColor4);
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: color .3s ease-in-out;
+    border: none;
+    }
+    .page-btn:hover{
+        background-color: var(--secondaryColor3);
+        color: var(--mainColor1);
+    }
+
+.error{
+    color: darkred
+}
+.field {
+    width: 75%;
+    max-width: 400px;
+    height: 40px;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid var(--secondaryColor3);
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width and height */
+  }
+  .field:focus{
+    outline: var(--mainColor2);
+    border-color: var(--mainColor2);
+    box-shadow: 0 0 5px var(--mainColor2);
+  }

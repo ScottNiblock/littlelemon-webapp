@@ -9,7 +9,7 @@ return(
     <h1>Little Lemon</h1>
     <h3>Chicago</h3>
     <p>Little Lemon is a family owned mediterannean restaurant focused on traditional recipes with a modern twist. Book your mediterannean dining experience today!</p>
-    <Link to="/reservations">
+    <Link to="/bookings">
     <button className="page-btn">Reserve a Table</button>
     </Link>
     </div>

@@ -6,6 +6,14 @@
     box-sizing: border-box;
     font-family: "Markazi Text", serif;
 }
+.full-homepage{
+
+background-image: url('../images/lemonpattern.jpeg');
+}
+.homepage-content{
+    margin: auto;
+    max-width: 1200px;
+}
 .logo{
     height: 60px;
 }
@@ -145,11 +153,11 @@ border: none;
     color: gray;
 }
 .delivery-btn{
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 .testimonials{
-    background-color: var(--secondaryColor4);
-    color:var(--secondaryColor3);
+    background-color: var(--secondaryColor2);
+    color:var(--secondaryColor4);
     text-align: center;
 }
 .testimonial-layout{
@@ -161,7 +169,7 @@ border: none;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid var(--secondaryColor3);
+    border: 1px solid var(--secondaryColor4);
     border-radius: 8px;
     margin: 1rem;
     width: 20%;
@@ -171,6 +179,7 @@ border: none;
     width: 100%;
     
 }
+
 
 /* styling for when screen size is equal to or less than 1024px */
 @media only screen and (max-width: 1024px){
@@ -218,21 +227,16 @@ border: none;
 }
 /* convert specials to column display on screen shrink */
 @media (max-width:762px){
-    .special-card-layout{
+    .special-card-layout, .testimonial-layout{
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
 
     }
-    .special-card{
+    .special-card, .testimonial-card{
         width: 75%;
         height: 50%;
     }
 
 }
 /*Change font size for larger screens*/
-@media (min-width:1000px){
-    .special-card p{
-        font-size: 2rem;
-    }
-}

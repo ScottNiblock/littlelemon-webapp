@@ -1,0 +1,17 @@
+
+:root{
+    --mainColor1: #495e57;
+    --mainColor2: #f4ce14;
+    --secondaryColor1: #ee9972;
+    --secondaryColor2: #fbdabb;
+    --secondaryColor3: #edefee;
+    --secondaryColor4: #333333;
+}
+.confirmation-details{
+    background-color: var(--mainColor1);
+    color: var(--mainColor2);
+    padding: 1rem;
+}
+li{
+    list-style-type: none;
+}
