@@ -1,7 +1,11 @@
+import { FaTools } from "react-icons/fa";
+
 const Menu = ()=>{
     return(
-  
-        <h1>Menu</h1>
+ 
+  <div className="construction">
+        <FaTools color="#495e57" size='5rem'/><h1>This Page is Under Construction</h1>
+        </div>
        
         
     )

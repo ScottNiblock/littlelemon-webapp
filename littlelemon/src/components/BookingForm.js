@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as Yup from 'yup'
 import { useNavigate } from "react-router-dom";
+import '../css/BookingPage.css'
 
 const BookingForm = (props) => {
     const [name, setName] = useState("")

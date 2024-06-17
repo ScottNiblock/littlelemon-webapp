@@ -179,6 +179,22 @@ border: none;
     width: 100%;
     
 }
+.construction{
+    text-align: center;
+    color: var(--mainColor1);
+}
+.about-content{
+    display: flex;
+}
+#about-us{
+    background-color: var(--mainColor1);
+    color: var(--secondaryColor3);
+    padding: 1rem;
+}
+.about-img{
+    padding-left: 1rem;
+    border-radius: 8%;
+}
 
 
 /* styling for when screen size is equal to or less than 1024px */
